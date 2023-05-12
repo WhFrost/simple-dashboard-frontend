@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+		"outDir": "./dist/",
+    "module": "ESNext",
+		"target": "ES5",
+    "noImplicitAny": true,
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
