@@ -32,11 +32,7 @@ export function BuildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
 
 	const fileLoader = {
 		test: /\.(png|jpe?g|gif|woff|woff2)$/i,
-		use: [
-			{
-				loader: 'file-loader',
-			},
-		],
+		type: 'asset/resource',
 	};
 
 	return [tsLoader, styleLoader, svgLoader, fileLoader];
