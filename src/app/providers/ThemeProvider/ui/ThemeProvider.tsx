@@ -12,7 +12,7 @@ export interface ThemeProviderProps {
 const defaultTheme =
 	(localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.DARK;
 
-function ThemeProvider({children}: ThemeProviderProps) {
+export function ThemeProvider({children}: ThemeProviderProps) {
 	const [theme, setTheme] = useState<Theme>(defaultTheme);
 
 	const defaultProps = useMemo(
@@ -29,5 +29,3 @@ function ThemeProvider({children}: ThemeProviderProps) {
 		</ThemeContext.Provider>
 	);
 }
-
-export default ThemeProvider;
