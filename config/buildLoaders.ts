@@ -14,7 +14,6 @@ export function BuildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 		test: /\.s[ac]ss$/i,
 		use: [
 			isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-			// 'css-loader',
 			{
 				loader: 'css-loader',
 				options: {
@@ -30,5 +29,6 @@ export function BuildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 			'sass-loader',
 		],
 	};
+
 	return [tsLoader, styleLoader];
 }
