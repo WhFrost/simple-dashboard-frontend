@@ -1,15 +1,16 @@
 import {Suspense} from 'react';
 import {Link} from 'react-router-dom';
 import {Routes, Route} from 'react-router-dom';
-import {MainPage} from '../pages/MainPage';
-import {ClientsPage} from '../pages/ClientsPage';
+import cn from 'classnames';
 import './ui/styles/global.scss';
-import {useTheme} from '../shared/lib/useTheme';
+import {useTheme} from 'app/providers/ThemeProvider';
+import {MainPage} from 'pages/MainPage';
+import {ClientsPage} from 'pages/ClientsPage';
 
 export default function App() {
 	const {theme, toggleTheme} = useTheme();
 	return (
-		<div className={`app ${theme}`}>
+		<div className={cn('app', theme)}>
 			<div>
 				<Link to={'/'}>Main</Link>
 				<Link to={'/clients'}>Clients</Link>
