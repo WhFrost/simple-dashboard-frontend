@@ -1,0 +1,11 @@
+@import 'normalize.css/normalize.css';
+@import './variables.scss';
+@import './fonts';
+@import './themes/dark.scss';
+@import './themes/ligth.scss';
+
+.app {
+	font-family: var(--body-font-family);
+	color: var(--primary-text-color);
+	min-height: 100vh;
+}
